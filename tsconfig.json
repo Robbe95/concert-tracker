@@ -1,4 +1,5 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./packages/nuxt/tsconfig.json",
+  "files": ["package.json", "eslint.config.js"]
+
 }

@@ -7,12 +7,4 @@ export default [
       'vue/no-undef-components': 'off',
     },
   },
-  {
-    settings: {
-      'vue-i18n': {
-        localeDir: './src/locales/*.json',
-        messageSyntaxVersion: '^9.0.0',
-      },
-    },
-  },
 ]
