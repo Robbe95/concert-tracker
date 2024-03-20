@@ -8,9 +8,6 @@
  * @see https://trpc.io/docs/server/procedures
  */
 import { initTRPC } from '@trpc/server'
-import { createTRPCNuxtClient, httpBatchLink } from 'trpc-nuxt/client'
-
-import type { AppRouter } from './entry'
 
 const t = initTRPC.create()
 
@@ -21,11 +18,3 @@ export const publicProcedure = t.procedure
 
 export const router = t.router
 export const middleware = t.middleware
-
-export const client = createTRPCNuxtClient<AppRouter>({
-  links: [
-    httpBatchLink({
-      url: '/api/trpc',
-    }),
-  ],
-})
