@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nx build",
+    "dev": "nx serve",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.45.2",
+    "@trpc/server": "^10.45.2",
+    "nuxt": "^3.11.0",
+    "trpc-nuxt": "^0.10.20",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^8.2.0",
+    "@wisemen/eslint-config-vue": "^0.0.10"
+  },
+  "nx": {
+    "includedScripts": []
+  }
+}
