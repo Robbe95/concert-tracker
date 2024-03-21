@@ -43,6 +43,8 @@ export default defineNuxtConfig({
       apiClientSecret: '', // can be overridden by NUXT_PUBLIC_API_CLIENT_SECRET environment variable
       apiEndpoint: '', // can be overridden by NUXT_PUBLIC_API_ENDPOINT environment variable
     },
+    supabaseKey: import.meta.env.NUXT_RUNTIME_SUPABASE_KEY,
+    supabaseUrl: import.meta.env.NUXT_RUNTIME_SUPABASE_URL,
   },
   vue: {
     propsDestructure: true,
