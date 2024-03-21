@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  build: {
+    transpile: [
+      'trpc-nuxt',
+      'drizzle-orm',
+    ],
+  },
   css: [
     '~/assets/styles/index.css',
   ],
@@ -28,7 +34,9 @@ export default defineNuxtConfig({
       tailwindcss: {},
     },
   },
+
   runtimeConfig: {
+    dbUrl: import.meta.env.NUXT_RUNTIME_DB_URL, // can be overridden by NUXT_RUNTIME_DB_URL environment variable
     public: {
       apiBaseUrl: '', // can be overridden by NUXT_PUBLIC_API_URL environment variable
       apiClientId: '', // can be overridden by NUXT_PUBLIC_API_CLIENT_ID environment variable

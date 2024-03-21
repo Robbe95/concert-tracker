@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { getUsers } from '~/api/users/getUsers'
+import { getConcertsQuery } from '~/api/concerts/getConcerts'
 
-const users = await getUsers()
+const concerts = await getConcertsQuery()
 </script>
 
 <template>
   <div>
-    {{ users }}
+    {{ concerts }}
   </div>
 </template>
