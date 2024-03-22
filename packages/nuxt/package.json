@@ -12,6 +12,7 @@
   "dependencies": {
     "@trpc/client": "^10.45.2",
     "@trpc/server": "^10.45.2",
+    "@wisemen/vue-core": "^0.0.22",
     "drizzle-orm": "^0.30.4",
     "drizzle-zod": "^0.5.1",
     "nuxt": "^3.11.0",

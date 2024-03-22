@@ -8,6 +8,8 @@ export default {
     './pages/**/*.{vue,js,ts,jsx,tsx}',
     './plugins/**/*.{vue,js,ts,jsx,tsx}',
     './transitions/**/*.{vue,js,ts,jsx,tsx}',
+    './transitions/**/*.{vue,js,ts,jsx,tsx}',
+    './node_modules/@wisemen/vue-core/dist/**/*.{vue,js,ts,jsx,tsx}',
   ],
   plugins: [],
   theme: {
