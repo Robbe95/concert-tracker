@@ -9,12 +9,19 @@
  */
 import { initTRPC } from '@trpc/server'
 
-const t = initTRPC.create()
+import type { AuthContext } from '../contexts/auth.context'
+import { getAuthMiddleware } from '../middlewares/auth.middleware'
 
+export const t = initTRPC
+  .context<AuthContext>()
+  .create()
+
+const authMiddleware = getAuthMiddleware()
 /**
  * Unprotected procedure
  */
 export const publicProcedure = t.procedure
+export const authProcedure = t.procedure.use(authMiddleware)
 
 export const router = t.router
 export const middleware = t.middleware

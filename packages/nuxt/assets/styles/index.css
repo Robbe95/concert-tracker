@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  @import 'reset';
+  @import "reset";
 
   :root {
     --black: 0, 0, 0;
     --white: 255, 255, 255;
 
-    --background: 255, 255, 255;
+    --background: 240, 255, 255;
     --foreground: 16, 24, 40;
 
     --primary: 253, 130, 4;
@@ -71,7 +71,6 @@
     --shadow-popover: 0px 24px 20px -8px rgba(181, 181, 183, 0.18);
     --shadow-input: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 
-
     --radius: 0.5rem;
     --radius-modal: 0.5rem;
     --radius-popover: 0.4rem;
@@ -106,7 +105,7 @@
 
   body {
     @apply bg-background font-sans flex flex-col min-h-screen;
-    font-family: 'Inter Variable', sans-serif;
+    font-family: "Inter Variable", sans-serif;
   }
 
   #app {

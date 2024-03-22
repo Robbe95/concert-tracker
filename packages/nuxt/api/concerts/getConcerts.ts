@@ -1,8 +1,8 @@
-import { useTrpc } from '../trpcClient'
+import { useTrpc } from '../useTrpc'
 
 export async function getConcertsQuery() {
-  const client = useTrpc()
-  const users = await client.concerts.getConcerts.query()
+  const { trpc } = useTrpc()
+  const concerts = await trpc.concerts.getConcerts.query()
 
-  return users
+  return concerts
 }
