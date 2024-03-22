@@ -6,6 +6,7 @@ import { useSupabase } from '../database/supabase'
 export async function createContext(event: H3Event) {
   const supabase = useSupabase()
   const authorization = getRequestHeader(event, 'authorization')
+
   async function getUserFromHeader() {
     try {
       if (authorization != null) {
@@ -18,6 +19,7 @@ export async function createContext(event: H3Event) {
       return null
     }
   }
+
   const user = await getUserFromHeader()
 
   return {

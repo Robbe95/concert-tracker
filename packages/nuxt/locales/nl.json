@@ -1,1 +1,8 @@
-{}
+{
+  "errors.login_failed_reason": "Er is iets misgelopen met het inloggen.",
+  "login.description": "Voer uw e-mailadres en wachtwoord in om in te loggen.",
+  "login.title": "Inloggen",
+  "shared.email": "E-mail",
+  "shared.login": "Aanmelden",
+  "shared.password": "Wachtwoord"
+}

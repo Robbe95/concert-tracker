@@ -20,6 +20,7 @@ export default defineNuxtConfig({
       { code: 'en', file: 'en.json', iso: 'en-GB' },
     ],
     strategy: 'prefix',
+    vueI18n: '~/locales/i18n.ts',
   },
   modules: [
     '@nuxtjs/i18n',

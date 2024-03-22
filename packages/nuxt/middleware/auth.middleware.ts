@@ -14,6 +14,7 @@ export default defineNuxtRouteMiddleware(async () => {
     if (newSession.data.session == null) {
       return navigateTo('/login')
     }
+
     setSession(newSession.data.session)
   }
   catch (error) {

@@ -14,5 +14,6 @@ export const createUser = publicProcedure
   .output(concertOutputSchema.array())
   .query(async (data) => {
     const concertService = useConcertsService()
+
     return await concertService.createConcert(data.input)
   })
