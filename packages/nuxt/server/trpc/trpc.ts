@@ -17,6 +17,7 @@ export const t = initTRPC
   .create()
 
 const authMiddleware = getAuthMiddleware()
+
 /**
  * Unprotected procedure
  */

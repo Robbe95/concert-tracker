@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { onKeyDown } from '@vueuse/core'
-import { AppButton, FormInput } from '@wisemen/vue-core'
+import {
+  AppButton,
+  FormInput,
+} from '@wisemen/vue-core'
 import { useForm } from 'formango'
 
 import { useTrpc } from '~/api/useTrpc'
+import FormPasswordInput from '~/components/app/input/FormPasswordInput.vue'
 import { useSupabase } from '~/server/database/supabase'
 import { loginInputSchema } from '~/server/modules/auth/models/login.model'
 
@@ -63,16 +67,16 @@ const password = form.register('password', '9592569Asamaru')
         :placeholder="t('shared.email')"
         type="email"
       />
-      <FormInput
+      <FormPasswordInput
         v-bind="password"
         :label="t('shared.password')"
         :placeholder="t('shared.password')"
-        type="password"
       />
     </div>
 
     <div class="flex justify-end">
       <AppButton
+        class="w-full"
         @click="form.submit"
       >
         {{ t('shared.login') }}

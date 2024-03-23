@@ -9,11 +9,11 @@
     --black: 0, 0, 0;
     --white: 255, 255, 255;
 
-    --background: 240, 255, 255;
-    --foreground: 16, 24, 40;
+    --background: 3, 12, 36;
+    --foreground: 255, 255, 255;
 
-    --primary: 253, 130, 4;
-    --primary-foreground: 255, 255, 255;
+    --primary: 0, 255, 163;
+    --primary-foreground: 3, 12, 36;
 
     --secondary: 32, 48, 49;
     --secondary-foreground: 255, 255, 255;
@@ -21,7 +21,7 @@
     --accent: 240, 238, 217;
     --accent-foreground: 57, 27, 27;
 
-    --destructive: 217, 45, 32;
+    --destructive: 222, 106, 106;
     --destructive-foreground: 255, 255, 255;
 
     --success: 31, 178, 37;
@@ -37,11 +37,11 @@
     --popover: 255, 255, 255;
     --popover-foreground: 0, 0, 0;
 
-    --card: 255, 255, 255;
-    --card-foreground: 0, 0, 0;
+    --card: 3, 12, 36;
+    --card-foreground: 255, 255, 255;
 
-    --border: 229, 233, 240;
-    --input: 255, 255, 255;
+    --border: 120, 135, 160;
+    --input: 0, 0, 12;
 
     --neutral-100: 242, 244, 247;
     --neutral-200: 234, 236, 240;
@@ -53,19 +53,19 @@
     --neutral-800: 29, 41, 57;
     --neutral-900: 16, 24, 40;
 
-    --ring: 253, 130, 4;
+    --ring: 0, 255, 163;
 
-    --input-foreground: 16, 24, 40;
+    --input-foreground: 255, 255, 255;
     --input-placeholder: 177, 177, 177;
     --input-disabled: 253, 253, 253;
-    --input-border: 224, 224, 224;
-    --input-ring: 253, 130, 4;
+    --input-border: 0, 0, 0;
+    --input-ring: 0, 255, 163;
 
     --shadow-sm: 0px 24px 20px -8px rgba(181, 181, 183, 0.18);
     --shadow-button: 0;
     --shadow-button-hover: 0;
 
-    --shadow-card: 0px 24px 20px -8px rgba(181, 181, 183, 0.18);
+    --shadow-card: 0;
     --shadow-card-hover: 0px 24px 20px -8px rgba(181, 181, 183, 0.18);
     --shadow-modal: 0px 24px 20px -8px rgba(181, 181, 183, 0.18);
     --shadow-popover: 0px 24px 20px -8px rgba(181, 181, 183, 0.18);
@@ -74,8 +74,8 @@
     --radius: 0.5rem;
     --radius-modal: 0.5rem;
     --radius-popover: 0.4rem;
-    --radius-card: 1rem;
-    --radius-button: 100px;
+    --radius-card: 0.5rem;
+    --radius-button: 0.5rem;
     --radius-input: 0.5rem;
     --radius-full: 9999px;
 

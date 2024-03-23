@@ -11,6 +11,7 @@ export default defineNuxtRouteMiddleware(async () => {
     }
 
     const newSession = await supabase.auth.setSession(session.value)
+
     if (newSession.data.session == null) {
       return navigateTo('/login')
     }
