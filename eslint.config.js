@@ -16,6 +16,31 @@ export default [
   },
   {
     rules: {
+      'padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', next: 'return', prev: '*' },
+        { blankLine: 'always', next: 'expression', prev: '*' },
+        { blankLine: 'always', next: '*', prev: 'expression' },
+        { blankLine: 'always', next: 'function', prev: '*' },
+        { blankLine: 'always', next: '*', prev: 'function' },
+        { blankLine: 'always', next: '*', prev: [
+          'const',
+          'let',
+          'var',
+        ] },
+        { blankLine: 'any', next: [
+          'const',
+          'let',
+          'var',
+        ], prev: [
+          'const',
+          'let',
+          'var',
+        ] },
+
+      ],
+      'putout/add-newline-before-function-call': 'off',
+      'putout/add-newline-before-return': 'off',
       'vue/no-undef-components': 'off',
     },
   },

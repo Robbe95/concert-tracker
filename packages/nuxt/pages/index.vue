@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { getConcertsQuery } from '~/api/concerts/getConcerts'
+import { getConcertsByUserId } from '~/api/concerts/getConcertsByUserIdQuery'
+import { getConcertsQuery } from '~/api/concerts/getConcertsQuery'
 
-await getConcertsQuery()
+const data = await getConcertsByUserId()
+const allData = await getConcertsQuery()
 
 definePageMeta({
   middleware: 'auth-middleware',
@@ -10,5 +12,8 @@ definePageMeta({
 </script>
 
 <template>
-  <div />
+  <div>
+    {{ data }}
+    {{ allData }}
+  </div>
 </template>
