@@ -36,11 +36,13 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    dbUrl: import.meta.env.NUXT_RUNTIME_DB_URL, // can be overridden by NUXT_RUNTIME_DB_URL environment variable
+    dbUrl: import.meta.env.NUXT_RUNTIME_DB_URL,
     public: {
       supabaseKey: import.meta.env.NUXT_RUNTIME_SUPABASE_KEY,
       supabaseUrl: import.meta.env.NUXT_RUNTIME_SUPABASE_URL,
     },
+    spotifyClientId: import.meta.env.NUXT_RUNTIME_SPOTIFY_CLIENT_ID,
+    spotifyClientSecret: import.meta.env.NUXT_RUNTIME_SPOTIFY_CLIENT_SECRET,
   },
   vue: {
     propsDestructure: true,

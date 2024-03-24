@@ -5,6 +5,6 @@ import postgres from 'postgres'
 const sql = postgres('...', { max: 1 })
 const db = drizzle(sql)
 
-await migrate(db, { migrationsFolder: 'drizzle' })
+await migrate(db, { migrationsFolder: 'migrations' })
 
 await sql.end()

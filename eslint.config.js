@@ -21,6 +21,8 @@ export default [
         { blankLine: 'always', next: 'return', prev: '*' },
         { blankLine: 'always', next: 'expression', prev: '*' },
         { blankLine: 'always', next: '*', prev: 'expression' },
+        { blankLine: 'any', next: 'expression', prev: 'expression' },
+
         { blankLine: 'always', next: 'function', prev: '*' },
         { blankLine: 'always', next: '*', prev: 'function' },
         { blankLine: 'always', next: '*', prev: [
@@ -39,6 +41,7 @@ export default [
         ] },
 
       ],
+      'putout/add-newline-after-function-call': 'off',
       'putout/add-newline-before-function-call': 'off',
       'putout/add-newline-before-return': 'off',
       'vue/no-undef-components': 'off',

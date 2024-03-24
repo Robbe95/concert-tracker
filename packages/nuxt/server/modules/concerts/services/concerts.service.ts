@@ -1,9 +1,10 @@
 import { eq } from 'drizzle-orm'
 
 import { useDatabase } from '~/server/database/database'
+import { concerts } from '~/server/entities/concerts.entity'
+import { concertUser } from '~/server/entities/concertUser.entity'
 
 import type { ConcertCreateInput } from '../models/concert.model'
-import { concerts, concertUser } from '../models/concert.model'
 
 export function useConcertsService() {
   const db = useDatabase()
