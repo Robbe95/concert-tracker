@@ -12,7 +12,8 @@ await suspense()
 </script>
 
 <template>
-  <div>
-    RANDOM INDEX
-  </div>
+  <MyConcertsOverview
+    v-if="data != null"
+    :concerts="data"
+  />
 </template>

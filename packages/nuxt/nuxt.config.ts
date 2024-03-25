@@ -5,6 +5,18 @@ export default defineNuxtConfig({
       'drizzle-orm',
     ],
   },
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+    {
+      path: '~/modules',
+      pathPrefix: false,
+    },
+
+  ],
   css: [
     '~/assets/styles/index.css',
   ],
