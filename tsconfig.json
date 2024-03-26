@@ -1,9 +1,9 @@
 {
   "extends": [
-    "./packages/nuxt/tsconfig.json",
+    "./packages/nuxt/tsconfig.json"
   ],
   "files": [
     "package.json",
     "eslint.config.js"
-  ],
+  ]
 }

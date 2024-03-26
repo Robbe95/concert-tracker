@@ -6,4 +6,5 @@
     "vue"
   ],
   "i18n-ally.keystyle": "flat",
+  "vue.server.hybridMode": true
 }

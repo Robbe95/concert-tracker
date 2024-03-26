@@ -39,7 +39,6 @@ export default [
           'let',
           'var',
         ] },
-
       ],
       'putout/add-newline-after-function-call': 'off',
       'putout/add-newline-before-function-call': 'off',
