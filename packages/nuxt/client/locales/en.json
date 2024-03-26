@@ -1,0 +1,8 @@
+{
+  "errors.login_failed_reason": "An error occurred while trying to login. Please try again.",
+  "login.description": "Please enter your email and password to login.",
+  "login.title": "Login",
+  "shared.email": "Email",
+  "shared.login": "Login",
+  "shared.password": "Password"
+}

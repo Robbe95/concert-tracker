@@ -5,7 +5,7 @@ import { authProcedure } from '~/server/trpc/trpc'
 
 export const getArtistsBySearch = authProcedure
   .input(z.object({
-    search: z.string().nonempty(),
+    search: z.string().min(1),
   }))
   .query(async ({ input }) => {
     const artistsService = useArtistsService()

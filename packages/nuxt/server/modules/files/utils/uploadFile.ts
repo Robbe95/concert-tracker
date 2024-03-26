@@ -1,4 +1,4 @@
-import { useSupabase } from '~/api/useClientSupabase'
+import { useSupabase } from '~/client/api/useClientSupabase'
 
 import type { Folder } from '../types/folder.type'
 

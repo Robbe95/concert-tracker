@@ -2,12 +2,12 @@
 
 export default {
   content: [
-    './components/**/*.{vue,js,ts,jsx,tsx}',
-    './modules/**/*.{vue,js,ts,jsx,tsx}',
-    './layouts/**/*.{vue,js,ts,jsx,tsx}',
-    './pages/**/*.{vue,js,ts,jsx,tsx}',
-    './plugins/**/*.{vue,js,ts,jsx,tsx}',
-    './transitions/**/*.{vue,js,ts,jsx,tsx}',
+    './client/components/**/*.{vue,js,ts,jsx,tsx}',
+    './client/modules/**/*.{vue,js,ts,jsx,tsx}',
+    './client/layouts/**/*.{vue,js,ts,jsx,tsx}',
+    './client/pages/**/*.{vue,js,ts,jsx,tsx}',
+    './client/plugins/**/*.{vue,js,ts,jsx,tsx}',
+    './client/transitions/**/*.{vue,js,ts,jsx,tsx}',
     './node_modules/@wisemen/vue-core/dist/**/*.{vue,js,ts,jsx,tsx}',
   ],
   plugins: [],

@@ -5,33 +5,41 @@ export default defineNuxtConfig({
       'drizzle-orm',
     ],
   },
-
   components: [
     {
-      path: '~/components',
+      path: '~/client/components',
       pathPrefix: false,
     },
     {
-      path: '~/modules',
+      path: '~/client/modules',
       pathPrefix: false,
     },
   ],
   css: [
-    '~/assets/styles/index.css',
+    '~/client/assets/styles/index.css',
   ],
+
   devtools: { enabled: true },
+  dir: {
+    assets: 'client/assets',
+    layouts: 'client/layouts',
+    middleware: 'client/middleware',
+    pages: 'client/pages',
+    plugins: 'client/plugins',
+    public: 'client/public',
+  },
   experimental: {
     typedPages: true,
   },
   i18n: {
     defaultLocale: 'nl',
-    langDir: 'locales',
+    langDir: 'client/locales',
     locales: [
       { code: 'nl', file: 'nl.json', iso: 'nl-BE' },
       { code: 'en', file: 'en.json', iso: 'en-GB' },
     ],
     strategy: 'prefix',
-    vueI18n: '~/locales/i18n.ts',
+    vueI18n: '~/client/locales/i18n.ts',
   },
   modules: [
     '@nuxtjs/i18n',
@@ -45,7 +53,6 @@ export default defineNuxtConfig({
       tailwindcss: {},
     },
   },
-
   runtimeConfig: {
     dbUrl: import.meta.env.NUXT_RUNTIME_DB_URL,
     public: {
@@ -55,6 +62,7 @@ export default defineNuxtConfig({
     spotifyClientId: import.meta.env.NUXT_RUNTIME_SPOTIFY_CLIENT_ID,
     spotifyClientSecret: import.meta.env.NUXT_RUNTIME_SPOTIFY_CLIENT_SECRET,
   },
+
   vue: {
     propsDestructure: true,
   },

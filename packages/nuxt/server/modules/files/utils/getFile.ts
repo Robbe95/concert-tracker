@@ -1,4 +1,4 @@
-import { useSupabase } from '~/api/useClientSupabase'
+import { useSupabase } from '~/client/api/useClientSupabase'
 
 export function getFile(path: string) {
   const supabase = useSupabase()
