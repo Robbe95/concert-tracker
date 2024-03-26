@@ -8,7 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "migrations:generate": "drizzle-kit generate:pg",
+    "migrations:push": "drizzle-kit push:pg"
+
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.8",

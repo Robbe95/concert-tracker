@@ -12,5 +12,9 @@ export async function uploadFile(file: File, folder: Folder) {
     console.error(error)
   }
 
-  return data
+  if (data == null) {
+    throw new Error('No data returned from upload')
+  }
+
+  return data.path
 }

@@ -8,5 +8,6 @@ import {
 export const concerts = pgTable('concerts', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
   id: uuid('id').primaryKey().defaultRandom(),
-  name: text('name'),
+  imageUrl: text('image_url').notNull(),
+  name: text('name').notNull(),
 })

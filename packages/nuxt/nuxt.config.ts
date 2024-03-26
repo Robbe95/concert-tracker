@@ -15,7 +15,6 @@ export default defineNuxtConfig({
       path: '~/modules',
       pathPrefix: false,
     },
-
   ],
   css: [
     '~/assets/styles/index.css',
