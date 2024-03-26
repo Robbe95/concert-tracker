@@ -8,6 +8,7 @@ function useIdFunction() {
 
 <template>
   <ConfigProvider :use-id="useIdFunction">
+    <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
