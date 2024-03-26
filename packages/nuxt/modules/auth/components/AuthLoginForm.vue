@@ -18,6 +18,7 @@ const { setSession } = useTrpc()
 const supabase = useSupabase()
 const { t } = useI18n()
 const router = useRouter()
+const isLoading = ref<boolean>(false)
 
 const { form, onSubmitForm } = useForm({
   schema: loginInputSchema,
@@ -31,6 +32,8 @@ onKeyDown([
 
 onSubmitForm(async (data) => {
   try {
+    isLoading.value = true
+
     const response = await supabase.auth.signInWithPassword({
       email: data.email,
       password: data.password,
@@ -52,6 +55,9 @@ onSubmitForm(async (data) => {
         ],
       },
     })
+  }
+  finally {
+    isLoading.value = false
   }
 })
 
@@ -77,6 +83,7 @@ const password = form.register('password', '9592569Asamaru')
 
     <div class="flex justify-end">
       <AppButton
+        :is-loading="isLoading"
         class="w-full"
         @click="form.submit"
       >

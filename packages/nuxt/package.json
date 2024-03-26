@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.8",
+    "@tanstack/vue-query": "^5.28.7",
     "@trpc/client": "^10.45.2",
     "@trpc/server": "^10.45.2",
     "@vueuse/core": "^10.9.0",
