@@ -5,7 +5,7 @@ import { concerts } from '~/server/entities/concerts.entity'
 import { concertUser } from '~/server/entities/concertUser.entity'
 import type { ConcertInsert } from '~/server/modules/concerts/models/concert.model'
 import { uploadFile } from '~/server/modules/files/utils/uploadFile'
-import type { ConcertCreateInput } from '~/shared/models/concertCreate.model'
+import type { ConcertCreateInput } from '~/shared/models/concerts/concertCreate.model'
 import { base64Util } from '~/shared/utils/base64'
 
 export function useConcertsService() {

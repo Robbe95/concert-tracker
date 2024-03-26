@@ -1,6 +1,6 @@
 import { authProcedure } from '~/server/trpc/trpc'
-import { concert } from '~/shared/models/concert.model'
-import { concertCreateInput } from '~/shared/models/concertCreate.model'
+import { concert } from '~/shared/models/concerts/concert.model'
+import { concertCreateInput } from '~/shared/models/concerts/concertCreate.model'
 
 import { useConcertsService } from '../services/concerts.service'
 

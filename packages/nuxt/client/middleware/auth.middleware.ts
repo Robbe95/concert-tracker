@@ -1,8 +1,8 @@
-import { useSupabase } from '~/client/api/useClientSupabase'
+import { useSupabaseClient } from '~/client/api/useClientSupabase'
 import { useTrpc } from '~/client/api/useTrpc'
 
 export default defineNuxtRouteMiddleware(async () => {
-  const supabase = useSupabase()
+  const supabase = useSupabaseClient()
   const { session, setSession } = useTrpc()
 
   try {

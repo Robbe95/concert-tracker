@@ -10,12 +10,16 @@ export async function createContext(event: H3Event) {
   async function getUserFromHeader() {
     try {
       if (authorization != null) {
-        return (await supabase.auth.getUser(authorization.split(' ')[1])).data.user
+        const token = authorization.split(' ')[1]
+
+        return (await supabase.auth.getUser(token)).data.user
       }
 
       return null
     }
     catch (error) {
+      console.error('Error in auth.context.ts', error)
+
       return null
     }
   }

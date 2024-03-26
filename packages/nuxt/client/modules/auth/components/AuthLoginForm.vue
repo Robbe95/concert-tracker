@@ -6,15 +6,15 @@ import {
 } from '@wisemen/vue-core'
 import { useForm } from 'formango'
 
+import { useSupabaseClient } from '~/client/api/useClientSupabase'
 import { useTrpc } from '~/client/api/useTrpc'
 import FormPasswordInput from '~/client/components/app/input/FormPasswordInput.vue'
-import { useSupabase } from '~/server/database/supabase'
 import { loginInputSchema } from '~/server/modules/auth/models/login.model'
 
 const localePath = useLocalePath()
 
 const { setSession } = useTrpc()
-const supabase = useSupabase()
+const supabase = useSupabaseClient()
 const { t } = useI18n()
 const router = useRouter()
 const isLoading = ref<boolean>(false)

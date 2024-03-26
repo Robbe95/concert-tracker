@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
 
 import { useTrpc } from '~/client/api/useTrpc'
-import type { ConcertCreateInput } from '~/shared/models/concertCreate.model'
+import type { ConcertCreateInput } from '~/shared/models/concerts/concertCreate.model'
 
 export function useCreateConcertMutation() {
   return useMutation({

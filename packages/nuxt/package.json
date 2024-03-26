@@ -11,9 +11,9 @@
     "lint": "eslint .",
     "migrations:generate": "drizzle-kit generate:pg",
     "migrations:push": "drizzle-kit push:pg"
-
   },
   "dependencies": {
+    "@supabase/ssr": "^0.1.0",
     "@supabase/supabase-js": "^2.39.8",
     "@tanstack/vue-query": "^5.28.7",
     "@trpc/client": "^10.45.2",
@@ -24,6 +24,7 @@
     "drizzle-orm": "^0.30.4",
     "drizzle-zod": "^0.5.1",
     "formango": "^2.0.13",
+    "jwt-decode": "^4.0.0",
     "nuxt": "^3.11.0",
     "postgres": "^3.4.3",
     "radix-vue": "^1.5.3",

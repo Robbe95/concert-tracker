@@ -1,6 +1,6 @@
 import { useConcertsService } from '~/server/modules/concerts/services/concerts.service'
 import { authProcedure } from '~/server/trpc/trpc'
-import { concert } from '~/shared/models/concert.model'
+import { concert } from '~/shared/models/concerts/concert.model'
 
 export const getConcertsByUserId = authProcedure
   .output(concert.array())

@@ -2,9 +2,10 @@
 import { FormInput } from '@wisemen/vue-core'
 import { useForm } from 'formango'
 
-import type { Concert } from '~/shared/models/concert.model'
-import { concertCreateInput } from '~/shared/models/concertCreate.model'
-import { base64Util } from '~/shared/utils/base64'
+import { getSignedUploadUrlMutation } from '~/client/api/mutations/getSignedUploadUrlMutation'
+import { uploadToSignedUrlMutation } from '~/client/api/mutations/uploadToSignedUrlMutation'
+import type { Concert } from '~/shared/models/concerts/concert.model'
+import { concertCreateInput } from '~/shared/models/concerts/concertCreate.model'
 
 import { useCreateConcertMutation } from '../api/mutations/createConcertMutation'
 
@@ -17,6 +18,9 @@ defineProps<Props>()
 const { t } = useI18n()
 
 const createConcert = useCreateConcertMutation()
+const getSignedUrl = getSignedUploadUrlMutation()
+const uploadSignedUrl = uploadToSignedUrlMutation()
+
 const { form, onSubmitForm } = useForm({
   schema: concertCreateInput,
 })
@@ -35,9 +39,17 @@ async function setFile(event: Event) {
     return
   }
 
-  const base64File = await base64Util.fileToBase64(input.files[0])
+  const signedData = await getSignedUrl.mutateAsync({
+    concertId: '123',
+    filename: input.files[0].name,
+  })
 
-  image.setValue(base64File)
+  const uploadData = uploadSignedUrl.mutateAsync({
+    file: input.files[0],
+    fileData: signedData,
+  })
+
+  console.warn(uploadData)
 }
 </script>
 
@@ -58,3 +70,4 @@ async function setFile(event: Event) {
     </AppButton>
   </div>
 </template>
+~/shared/models/concerts/concert.model~/shared/models/concerts/concertCreate.model
