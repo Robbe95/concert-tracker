@@ -7,9 +7,10 @@ import {
 import { useForm } from 'formango'
 
 import { useTrpc } from '~/api/useTrpc'
-import FormPasswordInput from '~/components/app/input/FormPasswordInput.vue'
 import { useSupabase } from '~/server/database/supabase'
 import { loginInputSchema } from '~/server/modules/auth/models/login.model'
+
+import FormPasswordInput from '../app/input/FormPasswordInput.vue'
 
 const localePath = useLocalePath()
 

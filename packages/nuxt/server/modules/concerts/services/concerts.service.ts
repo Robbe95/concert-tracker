@@ -10,7 +10,9 @@ export function useConcertsService() {
   const db = useDatabase()
 
   async function getConcerts() {
-    return await db.select().from(concerts)
+    return await db
+      .select()
+      .from(concerts)
   }
 
   async function getConcertsOfUserId(userId: string) {
@@ -24,7 +26,10 @@ export function useConcertsService() {
   }
 
   async function createConcert(concertCreateInput: ConcertCreateInput) {
-    return await db.insert(concerts).values(concertCreateInput).returning()
+    return await db
+      .insert(concerts)
+      .values(concertCreateInput)
+      .returning()
   }
 
   return {

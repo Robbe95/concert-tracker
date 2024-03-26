@@ -9,7 +9,7 @@ export default defineConfig({
   driver: 'pg',
   out: './server/migrations',
   schema: [
-    './server/modules/**/*.model.ts',
+    './server/entities/**/*.ts',
   ],
   strict: true,
   verbose: true,
