@@ -27,7 +27,7 @@ export function useConcertsService() {
 
   async function createConcert(concertCreateInput: ConcertCreateInput) {
     const file = base64Util.base64ToFile(concertCreateInput.image)
-    const uploadedFile = await uploadFile(concertCreateInput.image, 'concerts')
+    const uploadedFile = await uploadFile(file, 'concerts')
 
     const dataObject: ConcertInsert = {
       imageUrl: uploadedFile,
