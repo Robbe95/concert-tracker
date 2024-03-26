@@ -1,6 +1,5 @@
 import { useSupabase } from '~/client/api/useClientSupabase'
-
-import type { Folder } from '../types/folder.type'
+import type { Folder } from '~/server/modules/files/types/folder.type'
 
 export async function uploadFile(file: File, folder: Folder) {
   const supabase = useSupabase()

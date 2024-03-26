@@ -1,19 +1,15 @@
 import { authProcedure } from '~/server/trpc/trpc'
+import { concert } from '~/shared/models/concert.model'
+import { concertCreateInput } from '~/shared/models/concertCreate.model'
 
-import { concertCreateInputSchema, concertSelectSchema } from '../models/concert.model'
 import { useConcertsService } from '../services/concerts.service'
 
-const concertOutputSchema = concertSelectSchema.transform((data) => {
-  return {
-    name: data.name,
-  }
-})
-
-export const createUser = authProcedure
-  .input(concertCreateInputSchema)
-  .output(concertOutputSchema.array())
-  .query(async (data) => {
+export const createConcert = authProcedure
+  .input(concertCreateInput)
+  .output(concert.array())
+  .mutation(async ({ input }) => {
     const concertService = useConcertsService()
+    const concertResponse = await concertService.createConcert(input)
 
-    return await concertService.createConcert(data.input)
+    return concertResponse
   })
