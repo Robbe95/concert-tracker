@@ -8,7 +8,8 @@ export const getSignedUploadUrl = authProcedure
   .input(filesCreateUploadUrlInput)
   .output(filesCreateUploadUrlOutput)
   .mutation(async ({ input }) => {
-    const supabase = useSupabase()
+    const supabase = await useSupabase()
+
     const uuid = generateUuid()
     const { data, error } = await supabase.storage
       .from(BUCKET_NAME)

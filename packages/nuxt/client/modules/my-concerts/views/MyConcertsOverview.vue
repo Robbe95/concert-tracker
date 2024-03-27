@@ -39,6 +39,8 @@ async function setFile(event: Event) {
     return
   }
 
+  console.log(input.files[0])
+
   const signedData = await getSignedUrl.mutateAsync({
     concertId: '123',
     filename: input.files[0].name,
@@ -70,4 +72,3 @@ async function setFile(event: Event) {
     </AppButton>
   </div>
 </template>
-~/shared/models/concerts/concert.model~/shared/models/concerts/concertCreate.model

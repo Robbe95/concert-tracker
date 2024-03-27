@@ -4,7 +4,7 @@ import type { H3Event } from 'h3'
 import { useSupabase } from '../database/supabase'
 
 export async function createContext(event: H3Event) {
-  const supabase = useSupabase()
+  const supabase = await useSupabase()
   const authorization = getRequestHeader(event, 'authorization')
 
   async function getUserFromHeader() {

@@ -61,6 +61,8 @@ export default defineNuxtConfig({
     },
     spotifyClientId: import.meta.env.NUXT_RUNTIME_SPOTIFY_CLIENT_ID,
     spotifyClientSecret: import.meta.env.NUXT_RUNTIME_SPOTIFY_CLIENT_SECRET,
+    supabaseAdminEmail: import.meta.env.NUXT_RUNTIME_SUPABASE_ADMIN_EMAIL,
+    supabaseAdminPassword: import.meta.env.NUXT_RUNTIME_SUPABASE_ADMIN_PASSWORD,
   },
 
   vue: {
